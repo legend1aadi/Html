@@ -1,0 +1,168 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE HTML>
+<html>
+<head>
+    <TITLE>CALCULTOR</TITLE>
+    <link rel="stylesheet"src= "style.css">
+    </head>
+<body>
+    <h1 style=" text-align:center ">BASIC CALCULATOR</h1>
+    <DIV class="userInp" id = "resultDiv">
+    </DIV>
+    <section>
+    <DIV>
+    <BUTTON id="1" value="1">1</BUTTON>
+    <BUTTON id="2" value="2">2</BUTTON>
+    <BUTTON id ="3" value="3">3</BUTTON>
+    <button id ="clear" value="*0">★</button>
+    </DIV>
+    <DIV>
+    <BUTTON id="4" value="4">4</BUTTON>
+    <BUTTON id="5" value="5">5</BUTTON>
+    <BUTTON id="6" value="6">6</BUTTON>
+    <button id="div" value="/">/</button>
+    </DIV>
+    <DIV>
+    <BUTTON id="7" value="7">7</BUTTON>
+    <BUTTON id="8" value="8">8</BUTTON>
+    <BUTTON id="9" value="9">9</BUTTON>
+    <button id="mul" value="*">*</button>
+    </DIV>
+    </section>
+    <DIV>
+          <button id="0" value="0">0</button>
+          <BUTTON id="add" value="+">+</BUTTON>
+          <BUTTON id = "minus" value="-">-</BUTTON> 
+          <button id="=" value= "=">=</button>
+    </DIV>
+   
+    <DIV id ="resultDiv1">
+    </DIV>
+</body><style>
+h1{
+  background-color: black;
+  color: blue
+}
+BUTTON{
+  border: 2px solid yellow ;
+  height:50px;
+  width: 50px;
+  margin: 15px;
+  color: white;
+  background-color: black;
+  border-radius: 40px;
+  padding: 15px;
+  font-size : 25px;
+  position: center;
+}
+#zero{
+  margin: 15px;
+  justify-content : center ;
+}
+#input{
+  border: 5px solid;
+  width: 300px;
+  height: 150px;
+  }
+#resultDiv{
+  border: 5px solid;
+  width: 300px;
+  height: 30px;
+  }
+ #resultDiv1{
+  border: 5px solid;
+  width: 300px;
+  height: 150px;
+  }
+</style><script>const equal= document.getElementById('=')
+const one= document.getElementById('1');
+const two= document.getElementById('2');
+const three= document.getElementById('3');
+const four= document.getElementById('4');
+const five= document.getElementById('5');
+const six= document.getElementById('6');
+const seven= document.getElementById('7');
+const eight= document.getElementById('8');
+const nine= document.getElementById('9');
+const zero= document.getElementById('0');
+const addBtn = document.getElementById('add');
+const minusBtn = document.getElementById('minus');
+const resultDiv = document.getElementById('resultDiv');
+const resultDiv1 = document.getElementById('resultDiv1');
+const mulBtn= document.getElementById('mul');
+const divBtn=document.getElementById('div');
+const delBtn=document.getElementById('clear');
+var result="";
+
+one.addEventListener('click',()=>
+{
+  result=result +(one.value)
+  resultDiv.innerText=`= ${result}`});
+two.addEventListener('click',()=>
+{
+  result=result+ (two.value)
+  resultDiv.innerText=`= ${result}`});
+three.addEventListener('click',()=>
+{
+  result=result+ (three.value)
+  resultDiv.innerText=`= ${result}`});
+four.addEventListener('click',()=>
+{
+  result=result+ (four.value)
+  resultDiv.innerText=`= ${result}`});
+ five.addEventListener('click',()=>
+{
+  result=result+ (five.value)
+  resultDiv.innerText=`= ${result}`});
+six.addEventListener('click',()=>
+{
+  result=result+ (six.value)
+  resultDiv.innerText=`= ${result}`});
+seven.addEventListener('click',()=>
+{
+  result=result+ (seven.value)
+  resultDiv.innerText=`= ${result}`});
+eight.addEventListener('click',()=>
+{
+  result=result+ (eight.value)
+  resultDiv.innerText=`= ${result}`});
+  nine.addEventListener('click',()=>
+{
+  result=result+ (nine.value)
+  resultDiv.innerText=`= ${result}`});
+zero.addEventListener('click',()=>
+{
+  result=result+ (zero.value)
+  resultDiv.innerText=`= ${result}`});
+addBtn.addEventListener('click', () => {
+  result=result+ (addBtn.value);
+  resultDiv.innerText = `= ${result}`});
+  
+minusBtn.addEventListener('click', () => {
+  result=result+ (minusBtn.value);
+  resultDiv.innerText = `= ${result}`});
+mulBtn.addEventListener('click', () => {
+  result=result+ (mulBtn.value);
+  resultDiv.innerText = `= ${result}`}); 
+divBtn.addEventListener('click', () => {
+  result=result+ (divBtn.value);
+  resultDiv.innerText = `= ${result}`}); 
+ 
+delBtn.addEventListener('click',()=>{
+result = result.slice(0,-1);
+resultDiv.innerText=`=${result}`;
+});
+
+
+equal.addEventListener('click',()=>{
+var Aresult = eval(result);
+resultDiv1.innerText= `${Aresult}`});
+
+
+
+  
+  
+  
+  
+  
+  
+  </script>
